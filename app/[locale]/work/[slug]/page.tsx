@@ -98,7 +98,7 @@ export default async function ProjectPage({
         </h1>
         <p className="mt-1 text-lg text-mute">{project.title}</p>
 
-        <div className="mt-8 grid gap-8 border-t border-paper/15 pt-8 lg:grid-cols-[minmax(0,21rem)_minmax(0,1fr)] lg:items-start lg:gap-12">
+        <div className="mt-8 grid gap-8 border-t border-paper/15 py-8 lg:grid-cols-[minmax(0,21rem)_minmax(0,1fr)] lg:items-start lg:gap-12">
           <div className="h-fit lg:sticky lg:top-24">
             <p className="measure text-base leading-relaxed">
               {project.brief[locale]}
