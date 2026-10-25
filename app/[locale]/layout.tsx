@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/next";
 import type { Metadata } from "next";
 import { Archivo, JetBrains_Mono } from "next/font/google";
 import { notFound } from "next/navigation";
@@ -87,6 +88,7 @@ export default async function LocaleLayout({
         <main id="top" className="flex flex-1 flex-col [&>*]:w-full">
           {children}
         </main>
+        <Analytics />
       </body>
     </html>
   );
