@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { NextProject } from "@/components/next-project";
 import { ProjectPlayer } from "@/components/project-player";
+import { ProjectPreview } from "@/components/project-preview";
 import { RevealText } from "@/components/reveal-text";
 import { SiteFooter } from "@/components/site-footer";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
@@ -13,6 +13,14 @@ import {
   tagLabels,
 } from "@/lib/projects";
 import { site } from "@/lib/site";
+
+const PROJECT_ACCENTS = [
+  "bg-bar-y",
+  "bg-bar-b",
+  "bg-bar-g",
+  "bg-bar-r",
+  "bg-bar-dg",
+];
 
 export function generateStaticParams() {
   return locales.flatMap((locale) =>
@@ -53,10 +61,10 @@ export default async function ProjectPage({
   const next = getNextProject(slug);
   const index = projects.findIndex((item) => item.slug === slug);
   const nextIndex = (index + 1) % projects.length;
-  const nextAccent =
-    ["bg-bar-y", "bg-bar-b", "bg-bar-g", "bg-bar-r", "bg-bar-dg"][
-      nextIndex % 5
-    ];
+  const prevIndex = (index - 1 + projects.length) % projects.length;
+  const prev = projects[prevIndex];
+  const nextAccent = PROJECT_ACCENTS[nextIndex % PROJECT_ACCENTS.length];
+  const prevAccent = PROJECT_ACCENTS[prevIndex % PROJECT_ACCENTS.length];
   const disciplines = project.tags
     .map((tag) => tagLabels[tag][locale])
     .join(", ");
@@ -161,12 +169,21 @@ export default async function ProjectPage({
       </section>
 
       <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
-        <NextProject
-          locale={locale}
-          next={next}
-          label={dict.project.next}
-          accent={nextAccent}
-        />
+        <div className="grid gap-10 border-t border-paper/15 pb-8 pt-8 md:grid-cols-2 md:gap-12">
+          <ProjectPreview
+            locale={locale}
+            project={prev}
+            label={dict.project.previous}
+            accent={prevAccent}
+          />
+          <ProjectPreview
+            locale={locale}
+            project={next}
+            label={dict.project.next}
+            accent={nextAccent}
+            align="right"
+          />
+        </div>
       </div>
 
       <SiteFooter locale={locale} dict={dict} />

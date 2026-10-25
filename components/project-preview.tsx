@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import type { Locale } from "@/lib/i18n";
 
-type NextProjectData = {
+type PreviewProject = {
   slug: string;
   client: string;
   title: string;
@@ -12,47 +12,54 @@ type NextProjectData = {
   videoSrc?: string;
 };
 
-export function NextProject({
+export function ProjectPreview({
   locale,
-  next,
+  project,
   label,
-  accent = "bg-bar-b",
+  accent,
+  align = "left",
 }: {
   locale: Locale;
-  next: NextProjectData;
+  project: PreviewProject;
   label: string;
-  accent?: string;
+  accent: string;
+  align?: "left" | "right";
 }) {
   const [active, setActive] = useState(false);
-  const playing = active && Boolean(next.videoSrc);
+  const playing = active && Boolean(project.videoSrc);
+  const right = align === "right";
 
   return (
     <Link
-      href={`/${locale}/work/${next.slug}`}
+      href={`/${locale}/work/${project.slug}`}
       data-reveal
       onFocus={() => setActive(true)}
       onBlur={() => setActive(false)}
-      className="group block border-t border-paper/15 pb-6 pt-8"
+      className={`group flex h-full flex-col ${
+        right ? "md:items-end md:text-right" : "md:items-start"
+      }`}
     >
       <p className="data text-mute">{label}</p>
-      <p className="display mt-2 text-[clamp(1.75rem,5vw,3.25rem)]">
-        {next.client}
+      <p className="display mt-2 text-[clamp(1.5rem,3.6vw,2.75rem)]">
+        {project.client}
       </p>
-      <p className="mt-1 text-sm text-mute">{next.title}</p>
+      <p className="mt-1 text-sm text-mute">{project.title}</p>
       <span
         aria-hidden="true"
-        className={`mt-5 block h-[3px] w-10 transition-[width] duration-300 group-hover:w-28 ${accent}`}
+        className={`mt-4 block h-[3px] w-10 transition-[width] duration-300 group-hover:w-24 ${accent} ${
+          right ? "md:ml-auto" : ""
+        }`}
       />
 
       <span
-        className="relative mt-7 block aspect-video w-full max-w-[32rem] overflow-hidden rounded-[10px] border border-paper/15 bg-ink-2"
+        className="relative mt-6 block aspect-video w-full overflow-hidden rounded-[10px] border border-paper/15 bg-ink-2"
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
         {playing ? (
           <video
-            src={next.videoSrc}
-            poster={next.poster}
+            src={project.videoSrc}
+            poster={project.poster}
             autoPlay
             muted
             loop
@@ -63,13 +70,13 @@ export function NextProject({
           />
         ) : (
           <img
-            src={next.poster}
+            src={project.poster}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
           />
         )}
 
-        {next.videoSrc ? (
+        {project.videoSrc ? (
           <span
             aria-hidden="true"
             className={`pointer-events-none absolute inset-0 flex items-center justify-center bg-ink/20 transition-opacity duration-200 ${
