@@ -52,7 +52,7 @@ export function ProjectPreview({
       />
 
       <span
-        className="relative mt-6 block aspect-video w-full overflow-hidden rounded-[10px] border border-paper/15 bg-ink-2"
+        className="relative mt-6 block aspect-video w-[70%] overflow-hidden rounded-[10px] border border-paper/15 bg-ink-2"
         onMouseEnter={() => setActive(true)}
         onMouseLeave={() => setActive(false)}
       >
