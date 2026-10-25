@@ -96,13 +96,13 @@ const en = {
     cta: "Start a project",
     timeline: [
       {
-        period: "2024 — present",
+        period: "2025 — present",
         role: "Designer I",
         company: "Globo",
         place: "Rio de Janeiro",
       },
       {
-        period: "2017 — 2024",
+        period: "2017 — 2025",
         role: "Motion designer",
         company: "Pixel Produtora",
         place: "Rio de Janeiro",
@@ -301,13 +301,13 @@ const pt: Dictionary = {
     cta: "Começar um projeto",
     timeline: [
       {
-        period: "2024 — atual",
+        period: "2025 — atual",
         role: "Designer I",
         company: "Globo",
         place: "Rio de Janeiro",
       },
       {
-        period: "2017 — 2024",
+        period: "2017 — 2025",
         role: "Motion designer",
         company: "Pixel Produtora",
         place: "Rio de Janeiro",
