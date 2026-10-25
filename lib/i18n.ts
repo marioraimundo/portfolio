@@ -87,8 +87,8 @@ const en = {
     portraitAlt: "Mario Raimundo",
     bio: [
       "I'm Mario Raimundo, a motion designer, character animator and 3D generalist based in Rio de Janeiro. For the past decade I've built graphics for broadcast, advertising and brand campaigns, product films and character animation for education and entertainment.",
-      "I started in illustration and 2D animation, learned rigging and character performance in Toon Boom and After Effects, and later moved into 3D with Blender and Substance Painter. Today I work across the whole pipeline — concept, design, modeling, animation, lighting and compositing — which is why I'm usually the one carrying a board from the first sketch to final delivery.",
-      "I currently work as a designer at Globo, after seven years at Pixel Produtora. I'm available for freelance projects.",
+      "I started in illustration and 2D animation, learned rigging and character performance in After Effects, and later moved into 3D with Blender and Substance Painter. Today I work across the whole pipeline — concept, design, modeling, animation, lighting and compositing — which is why I'm usually the one carrying a board from the first sketch to final delivery.",
+      "I currently work as a designer at Globo, after eight years at Pixel Produtora. I'm available for freelance projects.",
     ],
     career: "Career",
     toolkit: "Toolkit",
@@ -292,8 +292,8 @@ const pt: Dictionary = {
     portraitAlt: "Mario Raimundo",
     bio: [
       "Sou Mario Raimundo, motion designer, animador de personagens e 3D generalista, baseado no Rio de Janeiro. Há uma década construo gráficos para transmissão, publicidade, campanhas de marca, filmes de produto e animação de personagens para educação e entretenimento.",
-      "Comecei na ilustração e na animação 2D, passei por rigging e atuação de personagem no Toon Boom e After Effects, e depois migrei para o 3D com Blender e Substance Painter. Hoje trabalho em todo o pipeline — conceito, design, modelagem, animação, luz e composição — e por isso costumo levar um board do primeiro esboço até a entrega final.",
-      "Atualmente sou designer na Globo, depois de sete anos na Pixel Produtora. Estou disponível para projetos freelance.",
+      "Comecei na ilustração e na animação 2D, passei por rigging e atuação de personagem no After Effects, e depois migrei para o 3D com Blender e Substance Painter. Hoje trabalho em todo o pipeline — conceito, design, modelagem, animação, luz e composição — e por isso costumo levar um board do primeiro esboço até a entrega final.",
+      "Atualmente sou designer na Globo, depois de oito anos na Pixel Produtora. Estou disponível para projetos freelance.",
     ],
     career: "Trajetória",
     toolkit: "Ferramentas",
