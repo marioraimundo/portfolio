@@ -33,6 +33,7 @@ export type Project = {
   title: string;
   year: string;
   tags: TagKey[];
+  discipline?: Record<Locale, string>;
   poster: string;
   videoId?: string;
   videoSrc?: string;
@@ -47,8 +48,12 @@ export const projects: Project[] = [
     slug: "volkswagen-maxi-performance",
     client: "Volkswagen",
     title: "Maxi Performance",
-    year: "2024",
+    year: "2021",
     tags: ["threeD", "motion"],
+    discipline: {
+      en: "Illustration, Rigging, 2D Character Animation and Motion",
+      pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
+    },
     poster: "/work/volkswagen-maxi-performance.jpg",
     videoSrc: "/work/volkswagen-maxi-performance.mp4",
     featured: true,
@@ -83,6 +88,10 @@ export const projects: Project[] = [
     title: "Libertadores 2019",
     year: "2019",
     tags: ["broadcast", "motion"],
+    discipline: {
+      en: "3D modeling, Compositing and Motion",
+      pt: "Modelagem 3D, Composição e Motion",
+    },
     poster: "/work/flamengo-libertadores-2019.jpg",
     videoSrc: "/work/flamengo-libertadores-2019.mp4",
     featured: true,
@@ -115,8 +124,12 @@ export const projects: Project[] = [
     slug: "cbf-fairplay",
     client: "CBF",
     title: "Fairplay",
-    year: "2024",
+    year: "2022",
     tags: ["broadcast", "character"],
+    discipline: {
+      en: "Illustration, 2D Motion",
+      pt: "Ilustração, Motion 2D",
+    },
     poster: `${CDN}/f87b9768-47ac-41ff-b19c-33ae8c0d0e17_carw_16x9x1920.png?h=ff869edcd8a26a950499a06fe440ae3b`,
     videoSrc: "/work/cbf-fairplay.mp4",
     featured: false,
@@ -151,6 +164,10 @@ export const projects: Project[] = [
     title: "Craque da Troca",
     year: "2024",
     tags: ["broadcast", "motion"],
+    discipline: {
+      en: "Illustration, Rigging, 2D Character Animation and Motion",
+      pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
+    },
     poster: `${CDN}/13e5478f-41ab-4a20-a5c4-0bd566cda2d9_carw_16x9x1920.png?h=a9b4b5ac62f7091b0205992801e1a2a5`,
     videoSrc: "/work/shell-craque-da-troca.mp4",
     featured: true,
@@ -183,6 +200,10 @@ export const projects: Project[] = [
     title: "Blender & After Effects course",
     year: "2024",
     tags: ["education", "threeD"],
+    discipline: {
+      en: "3D modeling, 2D Motion and Compositing",
+      pt: "Modelagem 3D, Motion 2D e Composição",
+    },
     poster: "/work/motion-design-school-blender.jpg",
     videoSrc: "/work/motion-design-school-blender.mp4",
     featured: true,
@@ -197,8 +218,12 @@ export const projects: Project[] = [
     slug: "amil-dental",
     client: "Amil",
     title: "Dental",
-    year: "2024",
+    year: "2020",
     tags: ["brand", "motion"],
+    discipline: {
+      en: "Illustration, Rigging, 2D Character Animation and Motion",
+      pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
+    },
     poster: `${CDN}/d5229b9d-5cee-4738-b40e-b91f06bafac0_carw_16x9x1920.png?h=41f745367d8549d7677cdb4962b81832`,
     videoSrc: "/work/amil-dental.mp4",
     featured: false,
@@ -212,8 +237,12 @@ export const projects: Project[] = [
     slug: "um-club-credit-card",
     client: "Um Club",
     title: "Credit card",
-    year: "2024",
+    year: "2022",
     tags: ["product", "threeD"],
+    discipline: {
+      en: "Illustration, Rigging, 2D Character Animation and Motion",
+      pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
+    },
     poster: `${CDN}/2d304318-b93b-4daf-8502-480b5c806d22_carw_16x9x1920.png?h=b591332fe331eadea7730bdb7385e7dd`,
     videoSrc: "/work/um-club-credit-card.mp4",
     featured: false,
@@ -515,8 +544,8 @@ export function toRundownItems(
     year: project.year,
     poster: project.poster,
     videoSrc: project.videoSrc,
-    disciplines: project.tags
-      .map((tag) => tagLabels[tag][locale])
-      .join(", "),
+    disciplines:
+      project.discipline?.[locale] ??
+      project.tags.map((tag) => tagLabels[tag][locale]).join(", "),
   }));
 }

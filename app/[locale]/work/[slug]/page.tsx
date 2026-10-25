@@ -65,9 +65,9 @@ export default async function ProjectPage({
   const prev = projects[prevIndex];
   const nextAccent = PROJECT_ACCENTS[nextIndex % PROJECT_ACCENTS.length];
   const prevAccent = PROJECT_ACCENTS[prevIndex % PROJECT_ACCENTS.length];
-  const disciplines = project.tags
-    .map((tag) => tagLabels[tag][locale])
-    .join(", ");
+  const disciplines =
+    project.discipline?.[locale] ??
+    project.tags.map((tag) => tagLabels[tag][locale]).join(", ");
 
   const spec = [
     { label: dict.project.client, value: project.client },
