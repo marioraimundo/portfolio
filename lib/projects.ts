@@ -199,7 +199,7 @@ export const projects: Project[] = [
       en: "3D modeling, 2D Motion and Compositing",
       pt: "Modelagem 3D, Motion 2D e Composição",
     },
-    poster: "/work/motion-design-school-blender.jpg",
+    poster: "/work/motion-design-school-blender-1s.jpg",
     videoSrc: "/work/motion-design-school-blender.mp4",
     featured: true,
     brief: {
