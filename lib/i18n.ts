@@ -181,7 +181,11 @@ const en = {
     estimate: "Estimate",
     disclaimer:
       "This is an estimate. The final quote will be agreed after a conversation with the client.",
-    note: "Reference range only. 50% on approval; balance on delivery.",
+    note: "Reference range only.",
+    paymentTitle: "Payment",
+    paymentMethods:
+      "Pix · TED (Itaú/Nubank) · Wise · Crypto via Binance (BTC, ETH, USDT, USDC)",
+    paymentTerms: "50% on approval; 50% on delivery.",
     statusAvailable: "Available for new projects",
     cta: "Send on WhatsApp",
     emailCta: "Send via email",
@@ -384,7 +388,11 @@ const pt: Dictionary = {
     estimate: "Estimativa",
     disclaimer:
       "Isto é uma estimativa. O orçamento final será previamente acordado após uma conversa com o cliente.",
-    note: "Faixa de referência. 50% na aprovação; saldo na entrega.",
+    note: "Faixa de referência apenas.",
+    paymentTitle: "Pagamento",
+    paymentMethods:
+      "Pix · TED (Itaú/Nubank) · Wise · Cripto via Binance (BTC, ETH, USDT, USDC)",
+    paymentTerms: "50% na aprovação; 50% na entrega.",
     statusAvailable: "Disponível para novos projetos",
     cta: "Enviar no WhatsApp",
     emailCta: "Enviar por e-mail",

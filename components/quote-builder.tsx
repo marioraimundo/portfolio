@@ -404,9 +404,20 @@ export function QuoteBuilder({
             </div>
           </dl>
 
-          <p className="mt-4 border-t border-paper/10 pt-3 text-[11px] leading-relaxed text-paper/60">
-            {strings.disclaimer}
-          </p>
+          <div className="mt-4 space-y-3 border-t border-paper/10 pt-3">
+            <div>
+              <p className="data text-mute">{strings.paymentTitle}</p>
+              <p className="mt-1.5 text-[11px] leading-relaxed text-paper/70">
+                {strings.paymentMethods}
+              </p>
+              <p className="mt-1 text-[11px] leading-relaxed text-paper/60">
+                {strings.paymentTerms}
+              </p>
+            </div>
+            <p className="border-t border-paper/10 pt-3 text-[11px] leading-relaxed text-paper/60">
+              {strings.disclaimer}
+            </p>
+          </div>
 
           <a
             href={href}
