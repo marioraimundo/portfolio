@@ -35,6 +35,12 @@ const PER_MINUTE: Record<string, number> = {
   subtitles: 20,
 };
 
+const BRL_PER_USD = 5.05;
+
+function displayValue(value: number, locale: Locale) {
+  return locale === "en" ? value / BRL_PER_USD : value;
+}
+
 function chipClass(active: boolean) {
   return `cursor-pointer border px-3.5 py-2 text-sm transition-colors focus-within:ring-2 focus-within:ring-paper focus-within:ring-offset-2 focus-within:ring-offset-ink ${
     active
@@ -46,15 +52,15 @@ function chipClass(active: boolean) {
 function currency(value: number, locale: Locale) {
   return new Intl.NumberFormat(locale === "pt" ? "pt-BR" : "en-US", {
     style: "currency",
-    currency: "BRL",
+    currency: locale === "en" ? "USD" : "BRL",
     maximumFractionDigits: 0,
-  }).format(value);
+  }).format(displayValue(value, locale));
 }
 
 function amount(value: number, locale: Locale) {
   return new Intl.NumberFormat(locale === "pt" ? "pt-BR" : "en-US", {
     maximumFractionDigits: 0,
-  }).format(value);
+  }).format(displayValue(value, locale));
 }
 
 function extraPriceLabel(id: string, locale: Locale) {
@@ -372,6 +378,11 @@ export function QuoteBuilder({
           >
             {range}
           </p>
+          {locale === "en" && (
+            <p className="mt-1.5 text-[11px] leading-relaxed text-mute">
+              {strings.usdNote}
+            </p>
+          )}
 
           <dl className="mt-5 space-y-2.5 border-t border-paper/10 pt-4 text-sm">
             <div className="flex justify-between gap-4">
