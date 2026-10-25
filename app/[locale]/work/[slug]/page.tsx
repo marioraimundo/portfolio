@@ -123,22 +123,6 @@ export default async function ProjectPage({
               </a>
             </div>
 
-            {project.sourceUrl && (
-              <a
-                href={project.sourceUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="group mt-6 inline-flex items-center gap-3 border border-paper/20 px-4 py-2.5 text-sm transition-colors hover:border-paper/60"
-              >
-                <span
-                  aria-hidden="true"
-                  className="h-[3px] w-6 bg-bar-b transition-all duration-200 group-hover:w-9"
-                />
-                {dict.project.watch}
-                <span className="sr-only">(opens in a new tab)</span>
-              </a>
-            )}
-
             {!project.videoId && !project.videoSrc && (
               <p className="data mt-3 text-mute">{dict.project.note}</p>
             )}

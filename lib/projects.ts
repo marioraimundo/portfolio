@@ -38,7 +38,6 @@ export type Project = {
   videoId?: string;
   videoSrc?: string;
   featured: boolean;
-  sourceUrl?: string;
   brief: Record<Locale, string>;
   breakdown?: ProjectBreakdown;
 };
@@ -57,7 +56,6 @@ export const projects: Project[] = [
     poster: "/work/volkswagen-maxi-performance.jpg",
     videoSrc: "/work/volkswagen-maxi-performance.mp4",
     featured: true,
-    sourceUrl: "https://marioraimundo.myportfolio.com/volkswagen-maxi-performance",
     brief: {
       en: "Campaign piece for the Volkswagen Maxi Performance line: 3D vehicle work cut against graphic transitions.",
       pt: "Peça de campanha para a linha Maxi Performance da Volkswagen: 3D de veículo cortado com transições gráficas.",
@@ -95,7 +93,6 @@ export const projects: Project[] = [
     poster: "/work/flamengo-libertadores-2019.jpg",
     videoSrc: "/work/flamengo-libertadores-2019.mp4",
     featured: true,
-    sourceUrl: "https://marioraimundo.myportfolio.com/flamengo-libertadores-2019",
     brief: {
       en: "Broadcast package for Flamengo's Libertadores campaign: opener, transitions and endtag built to run inside a live match.",
       pt: "Pacote de transmissão para a campanha do Flamengo na Libertadores: abertura, transições e endtag para rodar em jogo ao vivo.",
@@ -133,7 +130,6 @@ export const projects: Project[] = [
     poster: `${CDN}/f87b9768-47ac-41ff-b19c-33ae8c0d0e17_carw_16x9x1920.png?h=ff869edcd8a26a950499a06fe440ae3b`,
     videoSrc: "/work/cbf-fairplay.mp4",
     featured: false,
-    sourceUrl: "https://marioraimundo.myportfolio.com/cbf-fairplay",
     brief: {
       en: "Explainer for CBF's Financial Fair Play program, encouraging clubs to bring planning, management and financial sustainability to the game — fairness beyond the pitch.",
       pt: "Explicativo do programa Fair Play Financeiro da CBF, incentivando os clubes a trazer planejamento, gestão e sustentabilidade financeira para o futebol — fair play além do gramado.",
@@ -171,7 +167,6 @@ export const projects: Project[] = [
     poster: `${CDN}/13e5478f-41ab-4a20-a5c4-0bd566cda2d9_carw_16x9x1920.png?h=a9b4b5ac62f7091b0205992801e1a2a5`,
     videoSrc: "/work/shell-craque-da-troca.mp4",
     featured: true,
-    sourceUrl: "https://marioraimundo.myportfolio.com/shell-craque-da-troca",
     brief: {
       en: "Training film for Shell's Craque da Troca loyalty program, walking oil-change specialists through points, levels and rewards.",
       pt: "Filme de treinamento do programa Craque da Troca, da Shell, explicando a trocadores de óleo como acumular pontos, subir de nível e resgatar prêmios.",
@@ -207,8 +202,6 @@ export const projects: Project[] = [
     poster: "/work/motion-design-school-blender.jpg",
     videoSrc: "/work/motion-design-school-blender.mp4",
     featured: true,
-    sourceUrl:
-      "https://marioraimundo.myportfolio.com/motion-design-school-blender-and-after-effects-course",
     brief: {
       en: "Promo for Motion Design School's Blender and After Effects course.",
       pt: "Divulgação do curso de Blender e After Effects da Motion Design School.",
@@ -227,7 +220,6 @@ export const projects: Project[] = [
     poster: `${CDN}/d5229b9d-5cee-4738-b40e-b91f06bafac0_carw_16x9x1920.png?h=41f745367d8549d7677cdb4962b81832`,
     videoSrc: "/work/amil-dental.mp4",
     featured: false,
-    sourceUrl: "https://marioraimundo.myportfolio.com/amil-dental",
     brief: {
       en: "Explainer for Amil Dental covering the partner network, 24-hour emergency care, covered treatments and how to start using the plan.",
       pt: "Explicativo da Amil Dental sobre a rede credenciada, pronto atendimento 24h, tratamentos cobertos e como começar a usar o plano.",
@@ -246,7 +238,6 @@ export const projects: Project[] = [
     poster: `${CDN}/2d304318-b93b-4daf-8502-480b5c806d22_carw_16x9x1920.png?h=b591332fe331eadea7730bdb7385e7dd`,
     videoSrc: "/work/um-club-credit-card.mp4",
     featured: false,
-    sourceUrl: "https://marioraimundo.myportfolio.com/um-club-credit-card",
     brief: {
       en: "Product film for the Um Club card: everyday spending control, cash withdrawal, fraud protection and discounts close to home.",
       pt: "Filme de produto do cartão Um Club: controle dos gastos, saque em caixa eletrônico, proteção antifraude e descontos perto de casa.",
@@ -432,7 +423,7 @@ export const projects: Project[] = [
     title: "15s film",
     year: "2020",
     tags: ["brand", "motion"],
-    poster: "/work/calman-15s.jpg",
+    poster: "/work/calman-15s-11s.jpg",
     videoSrc: "/work/calman-15s.mp4",
     featured: false,
     brief: {
