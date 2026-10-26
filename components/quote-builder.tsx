@@ -35,7 +35,7 @@ const PER_MINUTE: Record<string, number> = {
   subtitles: 20,
 };
 
-const BRL_PER_USD = 5.05;
+const BRL_PER_USD = 5.59;
 
 function displayValue(value: number, locale: Locale) {
   return locale === "en" ? value / BRL_PER_USD : value;

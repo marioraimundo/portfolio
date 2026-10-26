@@ -183,7 +183,7 @@ const en = {
       "This is an estimate. The final quote will be agreed after a conversation with the client.",
     note: "Reference range only.",
     usdNote:
-      "USD estimates converted at R$5.05. The final invoice may use the exchange rate on the payment date.",
+      "USD estimates converted at R$5.59. The final invoice may use the exchange rate on the payment date.",
     paymentTitle: "Payment",
     paymentMethods:
       "Pix · TED (Itaú/Nubank) · Wise · Crypto via Binance (BTC, ETH, USDT, USDC)",
