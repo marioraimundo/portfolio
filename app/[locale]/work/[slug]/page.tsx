@@ -42,6 +42,25 @@ export async function generateMetadata({
   return {
     title: `${project.client} — ${project.title}`,
     description: project.brief[locale],
+    alternates: {
+      canonical: `/${locale}/work/${project.slug}`,
+      languages: {
+        en: `/en/work/${project.slug}`,
+        pt: `/pt/work/${project.slug}`,
+        "x-default": `/en/work/${project.slug}`,
+      },
+    },
+    openGraph: {
+      title: `${project.client} — ${project.title}`,
+      description: project.brief[locale],
+      type: "article",
+      locale: locale === "pt" ? "pt_BR" : "en_US",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.client} — ${project.title}`,
+      description: project.brief[locale],
+    },
   };
 }
 

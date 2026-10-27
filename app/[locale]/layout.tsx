@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ControlBar } from "@/components/control-bar";
 import { RevealObserver } from "@/components/reveal-observer";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import { site } from "@/lib/site";
 import "../globals.css";
 
 const archivo = Archivo({
@@ -36,17 +37,26 @@ export async function generateMetadata({
   const dict = getDictionary(locale);
 
   return {
+    metadataBase: new URL(site.url),
     title: dict.meta.title,
     description: dict.meta.description,
     alternates: {
       canonical: `/${locale}`,
-      languages: { en: "/en", pt: "/pt" },
+      languages: { en: "/en", pt: "/pt", "x-default": "/en" },
     },
     openGraph: {
       title: dict.meta.title,
       description: dict.meta.description,
+      siteName: site.name,
+      url: `/${locale}`,
       locale: locale === "pt" ? "pt_BR" : "en_US",
+      alternateLocale: locale === "pt" ? "en_US" : "pt_BR",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.meta.title,
+      description: dict.meta.description,
     },
   };
 }

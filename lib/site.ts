@@ -6,6 +6,7 @@ export type SocialIcon =
 
 export const site = {
   name: "Mario Raimundo",
+  url: "https://marioraimundo.vercel.app",
   year: 2026,
   portfolioUrl: "https://marioraimundo.myportfolio.com/",
   contactUrl: "https://marioraimundo.myportfolio.com/contact",
