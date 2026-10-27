@@ -41,10 +41,10 @@ export default async function Image({
   const poster = await posterDataUri(project?.poster);
 
   const clientSize =
-    client.length > 20 ? 40 : client.length > 14 ? 46 : client.length > 9 ? 54 : 60;
+    client.length > 20 ? 50 : client.length > 14 ? 58 : client.length > 9 ? 64 : 70;
 
   const clippedDiscipline =
-    discipline.length > 52 ? `${discipline.slice(0, 51)}…` : discipline;
+    discipline.length > 64 ? `${discipline.slice(0, 63)}…` : discipline;
 
   return new ImageResponse(
     (
@@ -57,47 +57,105 @@ export default async function Image({
           background: CARD.ink,
         }}
       >
-        <div style={{ display: "flex", width: "100%", height: 8 }}>
-          <div style={{ display: "flex", flex: 1, background: accent }} />
-        </div>
-
         <div
           style={{
             display: "flex",
-            flex: 1,
-            alignItems: "center",
-            gap: 52,
-            padding: "40px 56px 0",
+            width: "100%",
+            height: CARD.frameHeight,
+            position: "relative",
+            background: "#14161a",
+            overflow: "hidden",
           }}
         >
+          {poster ? (
+            <img
+              src={poster}
+              alt=""
+              width={CARD.width}
+              height={CARD.frameHeight}
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+            />
+          ) : null}
+
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              flex: 1,
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: 8,
+            }}
+          >
+            <div style={{ display: "flex", flex: 1, background: accent }} />
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              position: "absolute",
+              top: 34,
+              left: 44,
+              padding: "8px 16px",
+              background: "rgba(9,10,11,0.72)",
+              color: CARD.paper,
+              fontSize: 18,
+              letterSpacing: 3,
+            }}
+          >
+            SELECTED WORK · {year}
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <div
               style={{
                 display: "flex",
-                fontSize: 17,
-                letterSpacing: 4,
-                color: CARD.mute,
+                alignItems: "center",
+                justifyContent: "center",
+                width: 92,
+                height: 92,
+                borderRadius: 46,
+                background: "rgba(9,10,11,0.55)",
+                border: "2px solid rgba(236,237,234,0.75)",
+                paddingLeft: 7,
               }}
             >
-              SELECTED WORK · {year}
+              <img src={PLAY_ICON} alt="" width={30} height={34} />
             </div>
+          </div>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flex: 1,
+            padding: "30px 56px 28px",
+            justifyContent: "space-between",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column" }}>
             <div
               style={{
                 display: "flex",
-                marginTop: 12,
                 fontFamily: "Archivo",
                 fontWeight: 700,
                 fontSize: clientSize,
-                lineHeight: 1.05,
-                letterSpacing: -1.5,
+                lineHeight: 1.02,
+                letterSpacing: -2,
                 color: CARD.paper,
-                maxWidth: 500,
+                maxWidth: 1040,
               }}
             >
               {client}
@@ -106,11 +164,10 @@ export default async function Image({
               <div
                 style={{
                   display: "flex",
-                  marginTop: 12,
-                  fontSize: 24,
-                  lineHeight: 1.25,
+                  marginTop: 8,
+                  fontSize: 28,
                   color: CARD.mute,
-                  maxWidth: 470,
+                  maxWidth: 1000,
                 }}
               >
                 {title}
@@ -121,89 +178,33 @@ export default async function Image({
           <div
             style={{
               display: "flex",
-              position: "relative",
-              width: CARD.thumbWidth,
-              height: CARD.thumbHeight,
-              background: "#14161a",
-              borderRadius: 10,
-              overflow: "hidden",
-              border: "1px solid rgba(236,237,234,0.18)",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              width: "100%",
+              borderTop: "1px solid rgba(236,237,234,0.16)",
+              paddingTop: 16,
             }}
           >
-            {poster ? (
-              <img
-                src={poster}
-                alt=""
-                width={CARD.thumbWidth}
-                height={CARD.thumbHeight}
-                style={{
-                  objectFit: "cover",
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-            ) : null}
-
             <div
               style={{
                 display: "flex",
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                alignItems: "center",
-                justifyContent: "center",
+                fontSize: 19,
+                color: CARD.mute,
+                maxWidth: 780,
               }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: 72,
-                  height: 72,
-                  borderRadius: 36,
-                  background: "rgba(9,10,11,0.55)",
-                  border: "2px solid rgba(236,237,234,0.75)",
-                  paddingLeft: 6,
-                }}
-              >
-                <img src={PLAY_ICON} alt="" width={24} height={27} />
-              </div>
+              {clippedDiscipline}
             </div>
-          </div>
-        </div>
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            margin: "0 56px",
-            borderTop: "1px solid rgba(236,237,234,0.16)",
-            padding: "20px 0 40px",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              fontSize: 19,
-              color: CARD.mute,
-              maxWidth: 700,
-            }}
-          >
-            {clippedDiscipline}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              fontSize: 19,
-              letterSpacing: 2,
-              color: CARD.paper,
-            }}
-          >
-            MARIO RAIMUNDO
+            <div
+              style={{
+                display: "flex",
+                fontSize: 19,
+                letterSpacing: 2,
+                color: CARD.paper,
+              }}
+            >
+              MARIO RAIMUNDO
+            </div>
           </div>
         </div>
       </div>
