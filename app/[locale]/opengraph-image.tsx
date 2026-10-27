@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { ImageResponse } from "next/og";
-import { CARD, PLAY_ICON, reelFrameDataUri } from "@/lib/og-card";
+import { CARD, reelFrameDataUri } from "@/lib/og-card";
 
 export const alt = "Mario Raimundo — Motion designer";
 export const size = { width: CARD.width, height: CARD.height };
@@ -50,54 +50,9 @@ export default async function Image() {
               alt=""
               width={CARD.width}
               height={CARD.frameHeight}
-              style={{ objectFit: "contain", width: "100%", height: "100%" }}
+              style={{ objectFit: "cover", width: "100%", height: "100%" }}
             />
           ) : null}
-
-          <div
-            style={{
-              display: "flex",
-              position: "absolute",
-              top: 34,
-              left: 44,
-              padding: "8px 16px",
-              background: "rgba(9,10,11,0.72)",
-              color: CARD.paper,
-              fontSize: 18,
-              letterSpacing: 3,
-            }}
-          >
-            REEL 2025
-          </div>
-
-          <div
-            style={{
-              display: "flex",
-              position: "absolute",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                width: 104,
-                height: 104,
-                borderRadius: 52,
-                background: "rgba(9,10,11,0.55)",
-                border: "2px solid rgba(236,237,234,0.75)",
-                paddingLeft: 8,
-              }}
-            >
-              <img src={PLAY_ICON} alt="" width={34} height={38} />
-            </div>
-          </div>
         </div>
 
         <div

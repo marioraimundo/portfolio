@@ -27,7 +27,7 @@ export async function posterDataUri(poster?: string): Promise<string | null> {
 }
 
 export async function reelFrameDataUri(): Promise<string | null> {
-  return posterDataUri("/reel/og-reel-5s.jpg");
+  return posterDataUri("/reel/og-frame.jpg");
 }
 
 export const PLAY_ICON =
