@@ -32,7 +32,11 @@ export function SiteFooter({ locale, dict, showCta = true }: SiteFooterProps) {
                   href={`/${locale}/contact`}
                   className="display max-w-[18ch] text-[clamp(1.9rem,5vw,3.5rem)]"
                 >
-                  <RevealText text={dict.contact.title} delay={80} />
+                  <RevealText
+                    text={dict.contact.title}
+                    delay={80}
+                    animateLastWord
+                  />
                 </Link>
                 <Link
                   href={`/${locale}/contact`}

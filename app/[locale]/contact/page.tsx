@@ -44,7 +44,11 @@ export default async function ContactPage({
         <div className="mt-6 grid gap-12 xl:grid-cols-[minmax(0,1.2fr)_minmax(0,0.8fr)] xl:gap-12">
           <div>
             <h1 className="display max-w-[14ch] text-[clamp(2.5rem,8vw,6rem)]">
-              <RevealText text={dict.contact.titleLines.join("\n")} delay={80} />
+              <RevealText
+                text={dict.contact.titleLines.join("\n")}
+                delay={80}
+                animateLastWord
+              />
             </h1>
 
             <p
