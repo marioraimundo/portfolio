@@ -6,6 +6,7 @@ import { ControlBar } from "@/components/control-bar";
 import { RevealObserver } from "@/components/reveal-observer";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
 import { site } from "@/lib/site";
+import { structuredData } from "@/lib/structured-data";
 import "../globals.css";
 
 const archivo = Archivo({
@@ -58,6 +59,9 @@ export async function generateMetadata({
       title: dict.meta.title,
       description: dict.meta.description,
     },
+    verification: process.env.GOOGLE_SITE_VERIFICATION
+      ? { google: process.env.GOOGLE_SITE_VERIFICATION }
+      : undefined,
   };
 }
 
@@ -98,6 +102,10 @@ export default async function LocaleLayout({
         <main id="top" className="flex flex-1 flex-col [&>*]:w-full">
           {children}
         </main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData()) }}
+        />
         <Analytics />
       </body>
     </html>
