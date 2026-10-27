@@ -43,5 +43,6 @@ export const CARD = {
   paper: "#ecedea",
   mute: "#8b918c",
   bars: ["#f2ce1b", "#2b3ae0", "#2fb56b", "#e23a4e", "#1f6b45"],
-  frameHeight: 372,
+  thumbWidth: 528,
+  thumbHeight: 302,
 } as const;
