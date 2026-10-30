@@ -405,6 +405,26 @@ export const projects: Project[] = [
       en: "Ident for Super Game SIM ou Não: a 3D rocket, planet and game furniture built in Blender and finished in After Effects.",
       pt: "Vinheta do Super Game SIM ou Não: foguete 3D, planeta e elementos de game modelados no Blender e finalizados no After Effects.",
     },
+    caseStudy: {
+      en: {
+        context:
+          "SBT's Super Game SIM ou Não needed a 3D ident for its game-show segment. The rocket, planet and game furniture had to feel playful and fast, matching the energy of a live TV quiz show.",
+        role:
+          "3D asset modeling, texturing and broadcast motion for a TV station ident.",
+        process:
+          "I modeled and textured the rocket, planet and game furniture in Blender, then finished everything in After Effects. The result is a bright, retro-futuristic ident that works as a station bumper between segments.",
+        tools: "Blender, After Effects and Photoshop.",
+      },
+      pt: {
+        context:
+          "O Super Game SIM ou Não do SBT precisava de uma vinheta 3D para seu segmento de game-show. O foguete, o planeta e os móveis de jogo precisavam parecer divertidos e rápidos, correspondendo à energia de um quiz show ao vivo.",
+        role:
+          "Modelagem de assets 3D, texturização e motion para vinheta de emissora de TV.",
+        process:
+          "Modelei e texturizei o foguete, o planeta e os móveis de jogo no Blender, depois finalizei tudo no After Effects. O resultado é uma vinheta brilhante e retrô-futurista que funciona como bumper de emissora entre segmentos.",
+        tools: "Blender, After Effects e Photoshop.",
+      },
+    },
     breakdown: {
       role: {
         en: "3D Asset Modeling, Texturing & Broadcast Motion",
@@ -436,6 +456,26 @@ export const projects: Project[] = [
       en: "Summer campaign for Reserva, cutting runway and studio footage into a fast collage of textures.",
       pt: "Campanha de verão da Reserva, montando imagens de desfile e estúdio em uma colagem rápida de texturas.",
     },
+    caseStudy: {
+      en: {
+        context:
+          "Reserva's Summer 24 campaign needed a fast, textured collage built from runway and studio footage. The goal was a high-energy fashion film that felt like the brand: casual, cool and immediate.",
+        role:
+          "Motion design and editorial cutting of runway and studio footage.",
+        process:
+          "I cut runway and studio material into a fast-paced texture collage, keeping the pacing tight and the energy high. The result is a fashion film that feels like a mood board in motion.",
+        tools: "After Effects and Premiere Pro.",
+      },
+      pt: {
+        context:
+          "A campanha de verão da Reserva precisava de uma colagem rápida de texturas, cortando imagens de desfile e estúdio. O objetivo era um filme de moda de alta energia que tivesse a cara da marca: casual, descolado e imediato.",
+        role:
+          "Motion design e corte editorial de imagens de desfile e estúdio.",
+        process:
+          "Cortei imagens de desfile e estúdio em uma colagem rápida de texturas, mantendo o ritmo apertado e a energia alta. O resultado é um filme de moda que parece um mood board em movimento.",
+        tools: "After Effects e Premiere Pro.",
+      },
+    },
   },
   {
     slug: "swayone-sabre-s2",
@@ -449,6 +489,24 @@ export const projects: Project[] = [
     brief: {
       en: "Presentation motion for SwayOne's Sabre S2: market data and research animated into a clean narrative deck.",
       pt: "Motion de apresentação para o Sabre S2, da SwayOne: dados de mercado e pesquisa animados em uma narrativa limpa.",
+    },
+    caseStudy: {
+      en: {
+        context:
+          "SwayOne's Sabre S2 needed a presentation motion piece that turned market data and research into a clean narrative deck.",
+        role: "Presentation motion design and animated narrative deck.",
+        process:
+          "I took market data and research and animated it into a clean narrative deck, using motion to guide the viewer through complex information without overwhelming them.",
+        tools: "After Effects and Illustrator.",
+      },
+      pt: {
+        context:
+          "O Sabre S2 da SwayOne precisava de uma peça de motion de apresentação que transformasse dados de mercado e pesquisa em um deck narrativo limpo.",
+        role: "Motion design de apresentação e deck narrativo animado.",
+        process:
+          "Transformei dados de mercado e pesquisa em um deck narrativo limpo, usando o motion para guiar o espectador por informações complexas sem sobrecarregá-lo.",
+        tools: "After Effects e Illustrator.",
+      },
     },
   },
   {
@@ -464,6 +522,24 @@ export const projects: Project[] = [
       en: "Character study: a gorilla run cycle animated in 3D, lit against a flat court yellow backdrop.",
       pt: "Estudo de personagem: um ciclo de corrida de gorila animado em 3D, iluminado sobre um fundo amarelo chapado.",
     },
+    caseStudy: {
+      en: {
+        context:
+          "A personal character study: a gorilla run cycle animated in 3D, lit against a flat court-yellow backdrop.",
+        role: "Character rigging and complex 3D animation.",
+        process:
+          "I built a 3D rig for the gorilla and animated a full run cycle, focusing on weight, timing and performance. The flat yellow court backdrop keeps the attention entirely on the character and its movement.",
+        tools: "Blender.",
+      },
+      pt: {
+        context:
+          "Um estudo de personagem pessoal: um ciclo de corrida de gorila animado em 3D, iluminado contra um fundo amarelo chapado de quadra de tênis.",
+        role: "Rigging de personagem e animação 3D complexa.",
+        process:
+          "Criei um rig 3D para o gorila e animei um ciclo de corrida completo, focando em peso, tempo e performance. O fundo amarelo chapado de quadra de tênis mantém a atenção inteiramente no personagem e no seu movimento.",
+        tools: "Blender.",
+      },
+    },
   },
   {
     slug: "vale-tudo-impacto-cabeca",
@@ -477,6 +553,26 @@ export const projects: Project[] = [
     brief: {
       en: "Vignette for TV Globo's Vale Tudo: comic-book impact, 3D objects and lettering timed to the broadcast.",
       pt: "Vinheta do Vale Tudo, da TV Globo: impacto de quadrinhos, objetos 3D e lettering sincronizados com a transmissão.",
+    },
+    caseStudy: {
+      en: {
+        context:
+          "TV Globo's Vale Tudo is one of Brazil's most-watched telenovelas. The vignette needed to land instantly in a live broadcast environment, grabbing attention during commercial breaks and scene transitions without distracting from the story.",
+        role:
+          "Broadcast vignette design, 3D objects, comic-book impact style and lettering synchronized to the broadcast schedule.",
+        process:
+          "I developed a comic-book visual language with bold impacts and 3D objects that punctuate key story beats. Every animation was timed to the broadcast clock, ensuring the graphics landed precisely between scenes and never clashed with the live feed.",
+        tools: "Cinema 4D, After Effects and Photoshop.",
+      },
+      pt: {
+        context:
+          "A vinheta do Vale Tudo, da TV Globo, precisava marcar presença na transmissão ao vivo, chamando atenção durante intervalos comerciais e transições de cena sem distrair da história.",
+        role:
+          "Direção de vinheta de transmissão, objetos 3D, estilo de impacto em quadrinhos e lettering sincronizado com a programação.",
+        process:
+          "Desenvolvi uma linguagem visual de quadrinhos com impactos fortes e objetos 3D que pontuam momentos-chave da história. Cada animação foi sincronizada com o relógio da transmissão, garantindo que os gráficos pousassem precisamente entre cenas e nunca entrassem em conflito com o feed ao vivo.",
+        tools: "Cinema 4D, After Effects e Photoshop.",
+      },
     },
   },
   {
@@ -492,6 +588,24 @@ export const projects: Project[] = [
       en: "Logo animation for Japerá — the bird mark drawn on and resolved in a single continuous move.",
       pt: "Animação de logo para a Japerá — a marca do pássaro desenhada e resolvida em um único movimento contínuo.",
     },
+    caseStudy: {
+      en: {
+        context:
+          "Logo animation for Japerá: a bird mark drawn on and resolved in a single continuous move.",
+        role: "Logo animation and motion design.",
+        process:
+          "I animated the bird mark as one continuous draw-on move, resolving cleanly into the final logo. Simple, elegant and built to work as a standalone brand moment.",
+        tools: "After Effects and Illustrator.",
+      },
+      pt: {
+        context:
+          "Animação de logo para a Japerá: uma marca de pássaro desenhada e resolvida em um único movimento contínuo.",
+        role: "Animação de logo e motion design.",
+        process:
+          "Animei a marca do pássaro como um único movimento de desenho contínuo, resolvendo limpo no logotipo final. Simples, elegante e construída para funcionar como um momento de marca isolado.",
+        tools: "After Effects e Illustrator.",
+      },
+    },
   },
   {
     slug: "desafio-vibra",
@@ -505,6 +619,26 @@ export const projects: Project[] = [
     brief: {
       en: "Tutorial piece for Vibra's Desafio Podium, mixing screen capture with motion graphics and race footage.",
       pt: "Peça tutorial do Desafio Podium, da Vibra, misturando captura de tela com motion graphics e imagens de corrida.",
+    },
+    caseStudy: {
+      en: {
+        context:
+          "Vibra's Desafio Podium needed a tutorial piece that mixed screen capture with motion graphics and race footage, keeping an instructional tone while staying visually dynamic.",
+        role:
+          "Motion graphics, screen capture integration and tutorial editing.",
+        process:
+          "I combined screen capture with motion graphics and race footage to create a tutorial that feels both dynamic and instructional, guiding viewers through the challenge platform step by step.",
+        tools: "After Effects and Premiere Pro.",
+      },
+      pt: {
+        context:
+          "O Desafio Podium da Vibra precisava de uma peça tutorial que misturasse captura de tela com motion graphics e imagens de corrida, mantendo um tom instrutivo e ao mesmo tempo visualmente dinâmico.",
+        role:
+          "Motion graphics, integração de captura de tela e edição de tutorial.",
+        process:
+          "Combinei captura de tela com motion graphics e imagens de corrida para criar um tutorial que parece dinâmico e instrutivo ao mesmo tempo, guiando os espectadores pela plataforma de desafios passo a passo.",
+        tools: "After Effects e Premiere Pro.",
+      },
     },
   },
   {
@@ -520,6 +654,24 @@ export const projects: Project[] = [
       en: "Explainer for the Américas health network walking through the inpatient journey with illustrated characters.",
       pt: "Explicativo para a rede de saúde Américas percorrendo a jornada do paciente internado com personagens ilustrados.",
     },
+    caseStudy: {
+      en: {
+        context:
+          "An explainer for the Américas health network guiding viewers through the inpatient journey using illustrated characters.",
+        role: "Illustration, character animation and explainer motion design.",
+        process:
+          "I used illustrated characters to lead viewers through the inpatient journey at Américas health network, making a potentially stressful hospital experience feel clear, warm and human.",
+        tools: "Illustrator and After Effects.",
+      },
+      pt: {
+        context:
+          "Um explicativo para a rede de saúde Américas guiando o espectador pela jornada do paciente internado com personagens ilustrados.",
+        role: "Ilustração, animação de personagem e motion design explicativo.",
+        process:
+          "Usei personagens ilustrados para conduzir o espectador pela jornada do paciente internado na rede de saúde Américas, tornando uma experiência potencialmente estressante em algo claro, acolhedor e humano.",
+        tools: "Illustrator e After Effects.",
+      },
+    },
   },
   {
     slug: "lmp-7-tracos",
@@ -534,6 +686,24 @@ export const projects: Project[] = [
       en: "Aspen Pharma campaign \"Olhar com carinho\", animated in a seven-stroke line style.",
       pt: "Campanha \"Olhar com carinho\", da Aspen Pharma, animada em um estilo de linha em sete traços.",
     },
+    caseStudy: {
+      en: {
+        context:
+          "Aspen Pharma's \"Olhar com carinho\" campaign, animated in a seven-stroke line style.",
+        role: "Character animation and motion design.",
+        process:
+          "I animated the Aspen Pharma campaign using a distinctive seven-stroke line style, keeping the line continuous and expressive throughout the piece.",
+        tools: "After Effects and Illustrator.",
+      },
+      pt: {
+        context:
+          "Campanha \"Olhar com carinho\", da Aspen Pharma, animada em um estilo de linha em sete traços.",
+        role: "Animação de personagem e motion design.",
+        process:
+          "Animei a campanha da Aspen Pharma usando um estilo de linha em sete traços, mantendo a linha contínua e expressiva ao longo de toda a peça.",
+        tools: "After Effects e Illustrator.",
+      },
+    },
   },
   {
     slug: "calman-15s",
@@ -547,6 +717,24 @@ export const projects: Project[] = [
     brief: {
       en: "15-second brand film for CALMAN mattresses — soft light, blue palette and calm as the product promise.",
       pt: "Filme de marca de 15 segundos para os colchões CALMAN — luz suave, paleta azul e calma como promessa do produto.",
+    },
+    caseStudy: {
+      en: {
+        context:
+          "A 15-second brand film for CALMAN mattresses: soft light, blue palette and calm as the product promise.",
+        role: "Motion design and brand film.",
+        process:
+          "I used soft light, a blue color palette and calm movement to communicate the product promise of CALMAN mattresses: rest and relaxation.",
+        tools: "After Effects and Cinema 4D.",
+      },
+      pt: {
+        context:
+          "Um filme de marca de 15 segundos para os colchões CALMAN: luz suave, paleta azul e calma como promessa do produto.",
+        role: "Motion design e filme de marca.",
+        process:
+          "Usei luz suave, uma paleta de cores azul e movimento calmo para comunicar a promessa do produto dos colchões CALMAN: descanso e relaxamento.",
+        tools: "After Effects e Cinema 4D.",
+      },
     },
   },
 ];
