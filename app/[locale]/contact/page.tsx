@@ -6,6 +6,7 @@ import { RevealText } from "@/components/reveal-text";
 import { SiteFooter } from "@/components/site-footer";
 import { SocialLinks } from "@/components/social-links";
 import { getDictionary, isLocale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { site } from "@/lib/site";
 
 export async function generateMetadata({
@@ -17,10 +18,12 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
 
-  return {
+  return pageMetadata({
+    locale,
+    path: "/contact",
     title: `${dict.nav.contact} — ${dict.meta.title}`,
     description: dict.contact.body,
-  };
+  });
 }
 
 export default async function ContactPage({

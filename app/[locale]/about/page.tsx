@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { RevealText } from "@/components/reveal-text";
 import { SocialLinks } from "@/components/social-links";
 import { getDictionary, isLocale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { clients } from "@/lib/projects";
 
 export async function generateMetadata({
@@ -17,10 +18,12 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
 
-  return {
+  return pageMetadata({
+    locale,
+    path: "/about",
     title: `${dict.nav.about} — ${dict.meta.title}`,
     description: dict.about.bio[0],
-  };
+  });
 }
 
 export default async function AboutPage({

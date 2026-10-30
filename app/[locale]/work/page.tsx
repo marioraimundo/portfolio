@@ -4,6 +4,7 @@ import { RevealText } from "@/components/reveal-text";
 import { Rundown } from "@/components/rundown";
 import { SiteFooter } from "@/components/site-footer";
 import { getDictionary, isLocale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 import { projects, toRundownItems } from "@/lib/projects";
 
 export async function generateMetadata({
@@ -15,10 +16,12 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
 
-  return {
+  return pageMetadata({
+    locale,
+    path: "/work",
     title: `${dict.work.title} — ${dict.meta.title}`,
     description: dict.meta.description,
-  };
+  });
 }
 
 export default async function WorkPage({

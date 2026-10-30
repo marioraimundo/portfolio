@@ -12,8 +12,6 @@ const staticRoutes = [
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const lastModified = new Date();
-
   const languageAlternates = (path: string) => ({
     languages: Object.fromEntries(
       locales.map((locale) => [locale, `${site.url}/${locale}${path}`]),
@@ -23,7 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const pages = staticRoutes.flatMap((route) =>
     locales.map((locale) => ({
       url: `${site.url}/${locale}${route.path}`,
-      lastModified,
       changeFrequency: route.changeFrequency,
       priority: route.priority,
       alternates: languageAlternates(route.path),
@@ -33,7 +30,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const work = projects.flatMap((project) =>
     locales.map((locale) => ({
       url: `${site.url}/${locale}/work/${project.slug}`,
-      lastModified,
       changeFrequency: "yearly" as const,
       priority: 0.6,
       alternates: languageAlternates(`/work/${project.slug}`),

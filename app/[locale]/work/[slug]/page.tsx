@@ -6,6 +6,8 @@ import { ProjectPreview } from "@/components/project-preview";
 import { RevealText } from "@/components/reveal-text";
 import { SiteFooter } from "@/components/site-footer";
 import { getDictionary, isLocale, locales } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
+import { projectStructuredData } from "@/lib/structured-data";
 import {
   getNextProject,
   getProject,
@@ -39,29 +41,16 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return {};
 
-  return {
-    title: `${project.client} — ${project.title}`,
+  const base = `${project.client} — ${project.title}`;
+  const title = base.length <= 42 ? `${base} · Motion design` : base;
+
+  return pageMetadata({
+    locale,
+    path: `/work/${project.slug}`,
+    title,
     description: project.brief[locale],
-    alternates: {
-      canonical: `/${locale}/work/${project.slug}`,
-      languages: {
-        en: `/en/work/${project.slug}`,
-        pt: `/pt/work/${project.slug}`,
-        "x-default": `/en/work/${project.slug}`,
-      },
-    },
-    openGraph: {
-      title: `${project.client} — ${project.title}`,
-      description: project.brief[locale],
-      type: "article",
-      locale: locale === "pt" ? "pt_BR" : "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: `${project.client} — ${project.title}`,
-      description: project.brief[locale],
-    },
-  };
+    type: "article",
+  });
 }
 
 export default async function ProjectPage({
@@ -190,6 +179,15 @@ export default async function ProjectPage({
       </div>
 
       <SiteFooter locale={locale} dict={dict} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            projectStructuredData({ project, locale, discipline: disciplines }),
+          ),
+        }}
+      />
     </>
   );
 }

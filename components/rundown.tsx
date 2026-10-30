@@ -54,7 +54,7 @@ function RundownRow({
         ) : (
           <Image
             src={item.poster}
-            alt=""
+            alt={`${item.client} — ${item.title}`}
             fill
             sizes="136px"
             className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.04]"

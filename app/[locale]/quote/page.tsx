@@ -4,6 +4,7 @@ import { QuoteBuilder } from "@/components/quote-builder";
 import { RevealText } from "@/components/reveal-text";
 import { SiteFooter } from "@/components/site-footer";
 import { getDictionary, isLocale } from "@/lib/i18n";
+import { pageMetadata } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -14,10 +15,12 @@ export async function generateMetadata({
   if (!isLocale(locale)) return {};
   const dict = getDictionary(locale);
 
-  return {
+  return pageMetadata({
+    locale,
+    path: "/quote",
     title: `${dict.nav.quote} — ${dict.meta.title}`,
     description: dict.quote.intro,
-  };
+  });
 }
 
 export default async function QuotePage({
