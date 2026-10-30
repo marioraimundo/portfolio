@@ -116,29 +116,11 @@ export const projects: Project[] = [
       en: "3D modeling, Compositing and Motion",
       pt: "Modelagem 3D, Composição e Motion",
     },
-    caseStudy: {
-      en: {
-        context:
-          "A broadcast package for Flamengo's Libertadores campaign that had to survive live television: opener, transitions and endtag working at any moment of the match.",
-        role: "Broadcast package direction, opening titles and live match graphics.",
-        process:
-          "The system was built around alpha-channel transitions, so a cut from camera to graphics happens without a visible seam. Typography carries the impact — heavy, fast, timed to the crowd — while 3D gives the opener weight and the rest stays flat enough to read in a two-second cut.",
-        tools: "Cinema 4D, After Effects and Photoshop.",
-      },
-      pt: {
-        context:
-          "Pacote de transmissão para a campanha do Flamengo na Libertadores, feito para sobreviver à TV ao vivo: abertura, transições e endtag funcionando em qualquer momento do jogo.",
-        role: "Direção do pacote gráfico, abertura e vinhetas de jogo.",
-        process:
-          "O sistema foi construído em torno de transições com canal alpha, para que o corte da câmera para o gráfico aconteça sem emenda visível. A tipografia carrega o impacto — pesada, rápida, no tempo da torcida — enquanto o 3D dá peso à abertura e o resto fica chapado o suficiente para ser lido em um corte de dois segundos.",
-        tools: "Cinema 4D, After Effects e Photoshop.",
-      },
-    },
     poster: "/work/flamengo-libertadores-2019.jpg",
     videoSrc: "/work/flamengo-libertadores-2019.mp4",
     featured: true,
     brief: {
-      en: "Broadcast package for Flamengo's Libertadores campaign: opener, transitions and endtag built to run inside a live match.",
+      en: "Broadcast graphics package for Flamengo's 2019 Libertadores campaign: opener, transitions and endtag engineered to run inside live match broadcasts on Brazilian national television. High-impact motion design built for real-time sports television.",
       pt: "Pacote de transmissão para a campanha do Flamengo na Libertadores: abertura, transições e endtag para rodar em jogo ao vivo.",
     },
     breakdown: {
@@ -158,6 +140,26 @@ export const projects: Project[] = [
           "Transições com canal alpha para cortes instantâneos durante o jogo",
           "Ritmo tipográfico de alto impacto afinado com transmissões esportivas",
         ],
+      },
+    },
+    caseStudy: {
+      en: {
+        context:
+          "Flamengo's 2019 Libertadores campaign required a broadcast graphics package that could survive the intensity of live match television. The opener, transitions and endtag had to trigger at any moment during the match — with zero delay, no broken links and no visible seam breaks between camera and graphics.",
+        role:
+          "Broadcast package direction, opening titles and live match graphics. I designed the full visual system and animated every element from first boards to final delivery.",
+        process:
+          "The package was built around alpha-channel transitions, so a cut from camera to graphics happens without a visible seam. Typography carries the impact — heavy, fast, timed to the crowd — while 3D elements give the opener weight. Everything else stays flat enough to read in a two-second cut during live switching.",
+        tools: "Cinema 4D, After Effects and Photoshop.",
+      },
+      pt: {
+        context:
+          "A campanha do Flamengo na Libertadores de 2019 exigiu um pacote gráfico de transmissão que pudesse sobreviver à intensidade da TV ao vivo. A abertura, as transições e o endtag precisavam disparar a qualquer momento durante o jogo — sem atraso, sem links quebrados e sem emendas visíveis entre a câmera e o gráfico.",
+        role:
+          "Direção do pacote gráfico, abertura e gráficos de jogo ao vivo. Projetei todo o sistema visual e animei cada elemento, dos primeiros boards à entrega final.",
+        process:
+          "O pacote foi construído em torno de transições com canal alpha, para que um corte da câmera para o gráfico aconteça sem emenda visível. A tipografia carrega o impacto — pesada, rápida, no tempo da torcida — enquanto elementos 3D dão peso à abertura. Tudo o mais fica plano o suficiente para ser lido em um corte de dois segundos durante a transmissão ao vivo.",
+        tools: "Cinema 4D, After Effects e Photoshop.",
       },
     },
   },
