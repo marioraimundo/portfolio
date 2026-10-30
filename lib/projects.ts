@@ -27,6 +27,13 @@ export type ProjectBreakdown = {
   highlights: Record<Locale, string[]>;
 };
 
+export type ProjectCaseStudy = {
+  context: string;
+  role: string;
+  process: string;
+  tools: string;
+};
+
 export type Project = {
   slug: string;
   client: string;
@@ -34,6 +41,7 @@ export type Project = {
   year: string;
   tags: TagKey[];
   discipline?: Record<Locale, string>;
+  caseStudy?: Record<Locale, ProjectCaseStudy>;
   poster: string;
   videoId?: string;
   videoSrc?: string;
@@ -52,6 +60,24 @@ export const projects: Project[] = [
     discipline: {
       en: "Illustration, Rigging, 2D Character Animation and Motion",
       pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
+    },
+    caseStudy: {
+      en: {
+        context:
+          "A campaign piece for Volkswagen's Maxi Performance line, where the product had to read as engineering rather than decoration: mechanical parts in frame, cut by graphic transitions.",
+        role: "3D asset modeling, shading and lighting, plus the motion design that holds the shots together.",
+        process:
+          "I modeled and textured the mechanical components, built a high-contrast studio light setup to give the parts volume, and cut them against kinetic typography kept inside broadcast-safe areas.",
+        tools: "Blender, Substance Painter and After Effects.",
+      },
+      pt: {
+        context:
+          "Peça de campanha para a linha Maxi Performance da Volkswagen, em que o produto precisava ser lido como engenharia, não como decoração: peças mecânicas em quadro, cortadas por transições gráficas.",
+        role: "Modelagem, shading e iluminação 3D, além do motion design que amarra os planos.",
+        process:
+          "Modelei e texturizei os componentes mecânicos, montei uma luz de estúdio de alto contraste para dar volume às peças e cortei tudo com tipografia cinética dentro das áreas seguras de transmissão.",
+        tools: "Blender, Substance Painter e After Effects.",
+      },
     },
     poster: "/work/volkswagen-maxi-performance.jpg",
     videoSrc: "/work/volkswagen-maxi-performance.mp4",
@@ -90,6 +116,24 @@ export const projects: Project[] = [
       en: "3D modeling, Compositing and Motion",
       pt: "Modelagem 3D, Composição e Motion",
     },
+    caseStudy: {
+      en: {
+        context:
+          "A broadcast package for Flamengo's Libertadores campaign that had to survive live television: opener, transitions and endtag working at any moment of the match.",
+        role: "Broadcast package direction, opening titles and live match graphics.",
+        process:
+          "The system was built around alpha-channel transitions, so a cut from camera to graphics happens without a visible seam. Typography carries the impact — heavy, fast, timed to the crowd — while 3D gives the opener weight and the rest stays flat enough to read in a two-second cut.",
+        tools: "Cinema 4D, After Effects and Photoshop.",
+      },
+      pt: {
+        context:
+          "Pacote de transmissão para a campanha do Flamengo na Libertadores, feito para sobreviver à TV ao vivo: abertura, transições e endtag funcionando em qualquer momento do jogo.",
+        role: "Direção do pacote gráfico, abertura e vinhetas de jogo.",
+        process:
+          "O sistema foi construído em torno de transições com canal alpha, para que o corte da câmera para o gráfico aconteça sem emenda visível. A tipografia carrega o impacto — pesada, rápida, no tempo da torcida — enquanto o 3D dá peso à abertura e o resto fica chapado o suficiente para ser lido em um corte de dois segundos.",
+        tools: "Cinema 4D, After Effects e Photoshop.",
+      },
+    },
     poster: "/work/flamengo-libertadores-2019.jpg",
     videoSrc: "/work/flamengo-libertadores-2019.mp4",
     featured: true,
@@ -127,6 +171,24 @@ export const projects: Project[] = [
       en: "Illustration, 2D Motion",
       pt: "Ilustração, Motion 2D",
     },
+    caseStudy: {
+      en: {
+        context:
+          "An explainer for CBF's Financial Fair Play program, aimed at clubs: planning, management and financial sustainability, presented as fairness beyond the pitch.",
+        role: "Character design, 2D rigging and explainer animation.",
+        process:
+          "Stylised characters carry the argument. They were rigged for fluid performance so the explanation reads as storytelling instead of a slide deck, and the assets were built modular to be reused across broadcast and social cuts.",
+        tools: "Illustrator and After Effects.",
+      },
+      pt: {
+        context:
+          "Explicativo do programa Fair Play Financeiro da CBF, voltado aos clubes: planejamento, gestão e sustentabilidade financeira, apresentados como fair play além do gramado.",
+        role: "Design de personagens, rigging 2D e animação do explicativo.",
+        process:
+          "Os personagens estilizados conduzem o argumento. Foram rigados para uma atuação fluida, para que a explicação soe como narrativa e não como slide, e os assets foram construídos de forma modular para reaproveitamento em TV e redes.",
+        tools: "Illustrator e After Effects.",
+      },
+    },
     poster: `${CDN}/f87b9768-47ac-41ff-b19c-33ae8c0d0e17_carw_16x9x1920.png?h=ff869edcd8a26a950499a06fe440ae3b`,
     videoSrc: "/work/cbf-fairplay.mp4",
     featured: false,
@@ -163,6 +225,24 @@ export const projects: Project[] = [
     discipline: {
       en: "Illustration, Rigging, 2D Character Animation and Motion",
       pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
+    },
+    caseStudy: {
+      en: {
+        context:
+          "A training film for Shell's Craque da Troca loyalty program, explaining to oil-change specialists how points, levels and rewards actually work.",
+        role: "Motion graphics, interface simulation and gamified training.",
+        process:
+          "The explanation leans on screen simulation: real interface behaviour rebuilt in motion so the viewer recognises each step before doing it. Score and tier progression are animated with a game-like cadence to keep a training piece watchable to the end.",
+        tools: "After Effects, Illustrator and Premiere Pro.",
+      },
+      pt: {
+        context:
+          "Filme de treinamento do programa Craque da Troca, da Shell, explicando a trocadores de óleo como pontos, níveis e prêmios funcionam na prática.",
+        role: "Motion graphics, simulação de interface e treinamento gamificado.",
+        process:
+          "A explicação se apoia na simulação de tela: o comportamento real da interface é reconstruído em movimento para o espectador reconhecer cada etapa antes de executá-la. A pontuação e a progressão de níveis são animadas com cadência de jogo, para manter uma peça de treinamento assistível até o fim.",
+        tools: "After Effects, Illustrator e Premiere Pro.",
+      },
     },
     poster: `${CDN}/13e5478f-41ab-4a20-a5c4-0bd566cda2d9_carw_16x9x1920.png?h=a9b4b5ac62f7091b0205992801e1a2a5`,
     videoSrc: "/work/shell-craque-da-troca.mp4",
@@ -217,6 +297,24 @@ export const projects: Project[] = [
       en: "Illustration, Rigging, 2D Character Animation and Motion",
       pt: "Ilustração, Rigging, Animação de Personagens 2D e Motion",
     },
+    caseStudy: {
+      en: {
+        context:
+          "An explainer for Amil Dental covering the partner network, 24-hour emergency care, covered treatments and how to start using the plan.",
+        role: "Illustration, character rigging, 2D character animation and motion.",
+        process:
+          "Health plan rules are dense, so the film breaks them into short beats, each carried by an illustrated character performing the step being explained — network, emergency, coverage, activation. The tone stays light so the information lands without feeling like a contract.",
+        tools: "Illustrator and After Effects.",
+      },
+      pt: {
+        context:
+          "Explicativo da Amil Dental sobre a rede credenciada, pronto atendimento 24h, tratamentos cobertos e como começar a usar o plano.",
+        role: "Ilustração, rigging de personagem, animação 2D e motion.",
+        process:
+          "As regras de plano de saúde são densas, então o filme as quebra em blocos curtos, cada um conduzido por um personagem ilustrado executando a etapa explicada — rede, emergência, cobertura, ativação. O tom se mantém leve para a informação entrar sem parecer contrato.",
+        tools: "Illustrator e After Effects.",
+      },
+    },
     poster: `${CDN}/d5229b9d-5cee-4738-b40e-b91f06bafac0_carw_16x9x1920.png?h=41f745367d8549d7677cdb4962b81832`,
     videoSrc: "/work/amil-dental.mp4",
     featured: false,
@@ -249,12 +347,30 @@ export const projects: Project[] = [
     title: "Octopus",
     year: "2025",
     tags: ["threeD", "character"],
+    caseStudy: {
+      en: {
+        context:
+          "A short 3D character piece for Motion Design School: an octopus drummer. The exercise is rigging and performance — eight limbs that have to keep time.",
+        role: "Character rigging and complex 3D animation.",
+        process:
+          "A custom inverse-kinematics rig drives the eight tentacles independently, so each arm can hold its own beat while the others move. The animation is timed against the audio percussion, with the body carrying the weight of each hit.",
+        tools: "Blender, with finishing in After Effects.",
+      },
+      pt: {
+        context:
+          "Peça curta de personagem 3D para a Motion Design School: um polvo baterista. O exercício é rigging e atuação — oito membros que precisam manter o tempo.",
+        role: "Rigging de personagem e animação 3D complexa.",
+        process:
+          "Um rig customizado com cinemática inversa controla os oito tentáculos de forma independente, para que cada braço sustente sua própria batida enquanto os outros se movem. A animação é sincronizada com a percussão do áudio, e o corpo carrega o peso de cada golpe.",
+        tools: "Blender, com finalização no After Effects.",
+      },
+    },
     poster: "/work/mds-octopus.jpg",
     videoSrc: "/work/mds-octopus.mp4",
     featured: true,
     brief: {
       en: "Short 3D character piece for Motion Design School: an octopus drummer, rigged and animated in Blender.",
-      pt: "Peça curta de personagem 3D para a Motion Design School: um polvo baterista, riggado e animado no Blender.",
+      pt: "Peça curta de personagem 3D para a Motion Design School: um polvo baterista, rigado e animado no Blender.",
     },
     breakdown: {
       role: {

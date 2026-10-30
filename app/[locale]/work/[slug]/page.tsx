@@ -162,7 +162,38 @@ export default async function ProjectPage({
         </div>
       </section>
 
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-10">
+      {project.caseStudy?.[locale] ? (
+        <section
+          aria-labelledby="case-title"
+          className="mx-auto mt-14 max-w-[1440px] px-4 sm:mt-20 sm:px-6 lg:px-10"
+        >
+          <h2 id="case-title" data-reveal className="data text-mute">
+            {dict.project.caseTitle}
+          </h2>
+
+          <dl className="mt-5 border-t border-paper/12">
+            {[
+              { label: dict.project.caseContext, value: project.caseStudy[locale].context },
+              { label: dict.project.caseRole, value: project.caseStudy[locale].role },
+              { label: dict.project.caseProcess, value: project.caseStudy[locale].process },
+              { label: dict.project.caseTools, value: project.caseStudy[locale].tools },
+            ].map((row) => (
+              <div
+                key={row.label}
+                data-reveal
+                className="grid gap-2 border-b border-paper/12 py-5 md:grid-cols-[10rem_minmax(0,1fr)] md:gap-8"
+              >
+                <dt className="data text-mute">{row.label}</dt>
+                <dd className="measure text-[1.0625rem] leading-relaxed text-paper/85">
+                  {row.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      ) : null}
+
+      <div className="mx-auto mt-14 max-w-[1440px] px-4 sm:px-6 lg:px-10">
         <div className="grid gap-10 border-t border-paper/15 pb-8 pt-8 md:grid-cols-2 md:gap-12">
           <ProjectPreview
             locale={locale}
