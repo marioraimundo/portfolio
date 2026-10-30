@@ -534,9 +534,14 @@ export function toRundownItems(
     title: project.title,
     year: project.year,
     poster: project.poster,
-    videoSrc: project.videoSrc,
+    videoSrc: projectPreviewSrc(project.videoSrc),
     disciplines:
       project.discipline?.[locale] ??
       project.tags.map((tag) => tagLabels[tag][locale]).join(", "),
   }));
+}
+
+export function projectPreviewSrc(videoSrc?: string) {
+  if (!videoSrc) return undefined;
+  return videoSrc.replace(/\.mp4$/, "-preview.mp4");
 }

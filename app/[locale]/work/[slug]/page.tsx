@@ -11,6 +11,7 @@ import { projectStructuredData } from "@/lib/structured-data";
 import {
   getNextProject,
   getProject,
+  projectPreviewSrc,
   projects,
   tagLabels,
 } from "@/lib/projects";
@@ -153,6 +154,7 @@ export default async function ProjectPage({
               poster={project.poster}
               videoId={project.videoId}
               videoSrc={project.videoSrc}
+              previewSrc={projectPreviewSrc(project.videoSrc)}
               alt={`${project.client} — ${project.title}`}
               playLabel={dict.project.play}
             />

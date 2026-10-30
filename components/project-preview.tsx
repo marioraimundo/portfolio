@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import type { Locale } from "@/lib/i18n";
+import { projectPreviewSrc } from "@/lib/projects";
 
 type PreviewProject = {
   slug: string;
@@ -26,7 +27,8 @@ export function ProjectPreview({
   align?: "left" | "right";
 }) {
   const [active, setActive] = useState(false);
-  const playing = active && Boolean(project.videoSrc);
+  const hoverSrc = projectPreviewSrc(project.videoSrc);
+  const playing = active && Boolean(hoverSrc);
   const right = align === "right";
 
   return (
@@ -58,7 +60,7 @@ export function ProjectPreview({
       >
         {playing ? (
           <video
-            src={project.videoSrc}
+            src={hoverSrc}
             poster={project.poster}
             autoPlay
             muted

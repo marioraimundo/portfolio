@@ -5,12 +5,14 @@ export function ProjectPlayer({
   poster,
   videoId,
   videoSrc,
+  previewSrc,
   alt,
   playLabel,
 }: {
   poster: string;
   videoId?: string;
   videoSrc?: string;
+  previewSrc?: string;
   alt: string;
   playLabel: string;
 }) {
@@ -51,7 +53,7 @@ export function ProjectPlayer({
       {videoSrc ? (
         <video
           key="preview-video"
-          src={videoSrc}
+          src={previewSrc ?? videoSrc}
           poster={poster}
           autoPlay
           muted
